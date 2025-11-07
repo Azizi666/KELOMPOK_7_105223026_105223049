@@ -6,7 +6,7 @@ html,body { height: 100%; }
 body {
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color: #1f2937;
-  background: #fffaf0;
+  background: #faf5ff; /* Changed to light purple */
   line-height: 1.6;
 }
 
@@ -23,10 +23,10 @@ body {
   transition: transform .15s ease, box-shadow .15s ease;
 }
 .btn-primary {
-  background: #7a3e0a; color: #fff;
+  background: #9333ea; color: #fff; /* Changed to purple */
 }
 .btn-secondary {
-  background: transparent; color: #7a3e0a; border: 2px solid #7a3e0a;
+  background: transparent; color: #9333ea; border: 2px solid #9333ea; /* Changed to purple */
 }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
 
@@ -35,7 +35,7 @@ body {
 
 /* Hero */
 .hero {
-  background-image: linear-gradient(rgba(13,14,15,0.12), rgba(13,14,15,0.12)), url('../images/hero-coffee.jpg');
+  background-image: linear-gradient(rgba(147,51,234,0.12), rgba(147,51,234,0.12)), url('../images/hero-coffee.jpg'); /* Changed gradient to purple */
   background-size: cover;
   background-position: center;
   color: #111827;
@@ -52,16 +52,16 @@ body {
 }
 .menu-card:hover, .menu-item:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(15,23,42,0.12); }
 
-.price { font-weight: 700; color: #7a3e0a; }
+.price { font-weight: 700; color: #9333ea; } /* Changed to purple */
 .badge {
-  background: #fde68a;
-  color: #7a3e0a;
+  background: #e9d5ff; /* Changed to light purple */
+  color: #9333ea; /* Changed to purple */
   padding: 0.2rem 0.5rem;
   border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 700;
 }
-.badge.new { background: #c7f9cc; color: #166534; }
+.badge.new { background: #c7f9cc; color: #166534; } /* Kept green for "new" badge */
 
 /* Why choose us */
 article p { font-size: 0.95rem; color: #374151; }
@@ -77,18 +77,18 @@ article p { font-size: 0.95rem; color: #374151; }
   border: 1px solid #e6e1dc;
   margin-top: 0.25rem;
 }
-.input:focus { outline: 3px solid rgba(122,62,10,0.12); border-color: #7a3e0a; }
+.input:focus { outline: 3px solid rgba(147,51,234,0.12); border-color: #9333ea; } /* Changed to purple */
 
 /* Chips for filters */
 .btn-chip {
   padding: 0.35rem 0.6rem;
   border-radius: 999px;
-  border: 1px solid #e9d5b5;
+  border: 1px solid #d8b4fe; /* Changed to light purple */
   background: white;
   cursor: pointer;
   font-weight: 600;
 }
-.btn-chip.active { background: #7a3e0a; color: white; }
+.btn-chip.active { background: #9333ea; color: white; } /* Changed to purple */
 
 /* small responsive tweaks in responsive.css */
 

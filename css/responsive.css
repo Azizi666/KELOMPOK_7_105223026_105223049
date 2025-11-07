@@ -34,3 +34,29 @@ header .main-nav ul.hidden { display: none; }
   .hero-title { font-size: 1.6rem !important; }
   .btn { padding: 0.5rem 0.75rem; }
 }
+
+/* Purple dominant theme additions */
+body {
+  background-color: #faf5ff; /* bg-purple-50 equivalent */
+}
+
+footer {
+  background-color: #581c87; /* bg-purple-800 equivalent */
+}
+
+.btn-primary {
+  background-color: #9333ea; /* bg-purple-600 */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #7c3aed; /* bg-purple-700 */
+}
+
+.hero-bg {
+  background-color: rgba(147, 51, 234, 0.5); /* semi-transparent purple overlay if needed */
+}
+
+.nav-link:hover {
+  color: #7c3aed; /* hover:text-purple-700 */
+}
