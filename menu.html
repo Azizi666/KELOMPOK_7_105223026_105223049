@@ -11,11 +11,10 @@
 </head>
 <body class="bg-purple-50 font-sans text-gray-800">
 
-  <!-- Header (reuse) -->
   <header class="fixed top-0 left-0 right-0 bg-white/90 z-40 shadow-sm">
     <div class="container mx-auto px-4 py-3 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-2">
-        <img src="images/logo-placeholder.png" alt="" class="h-10 w-10 rounded" />
+        <img src="images/logo.png" alt="" class="h-10 w-10 rounded" />
         <span class="font-bold">Kopi Santai</span>
       </a>
       <nav>
@@ -33,7 +32,6 @@
     <section class="container mx-auto px-4 py-8">
       <h2 class="text-3xl font-bold mb-4">Daftar Menu Lengkap</h2>
 
-      <!-- Categories Filter -->
       <nav class="mb-6">
         <div class="flex flex-wrap gap-3">
           <button class="filter-btn btn-chip active" data-filter="all">All</button>
@@ -44,10 +42,9 @@
         </div>
       </nav>
 
-      <!-- Menu grid -->
+
       <section id="menuGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- 12+ items, each article with data-category -->
-        <!-- Coffee items -->
+
         <article class="menu-item" data-category="coffee">
           <figure><img src="images/espresso.jpg" alt="Espresso" class="w-full h-44 object-cover rounded" />
             <figcaption class="sr-only">Espresso</figcaption>
@@ -96,7 +93,6 @@
           </div>
         </article>
 
-        <!-- Non-Coffee -->
         <article class="menu-item" data-category="non-coffee">
           <figure><img src="images/matcha.jpg" alt="Matcha" class="w-full h-44 object-cover rounded" /></figure>
           <div class="p-4">
@@ -130,7 +126,6 @@
           </div>
         </article>
 
-        <!-- Food -->
         <article class="menu-item" data-category="food">
           <figure><img src="images/sandwich.jpg" alt="Sandwich" class="w-full h-44 object-cover rounded" /></figure>
           <div class="p-4">
@@ -164,7 +159,6 @@
           </div>
         </article>
 
-        <!-- Snacks -->
         <article class="menu-item" data-category="snacks">
           <figure><img src="images/cake.jpg" alt="Cake" class="w-full h-44 object-cover rounded" /></figure>
           <div class="p-4">
@@ -188,7 +182,6 @@
           </div>
         </article>
 
-        <!-- Extra items to reach 12+ -->
         <article class="menu-item" data-category="coffee">
           <figure><img src="images/mocha.jpg" alt="Mocha" class="w-full h-44 object-cover rounded" /></figure>
           <div class="p-4">
@@ -216,7 +209,6 @@
     </div>
   </footer>
 
-  <!-- Simple JS filter (uses data-filter, required by spec) -->
   <script>
     document.getElementById('year2').textContent = new Date().getFullYear();
 

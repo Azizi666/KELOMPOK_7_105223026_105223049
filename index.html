@@ -14,12 +14,11 @@
 </head>
 <body class="font-sans text-gray-800 bg-purple-50">
 
-  <!-- Header -->
   <header class="site-header fixed top-0 left-0 right-0 bg-white/90 backdrop-blur z-40 shadow-sm">
     <div class="container mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <a href="index.html" class="logo flex items-center gap-2">
-          <img src="images/logo-placeholder.png" alt="Logo Kopi Unyu" class="h-10 w-10 object-cover rounded" />
+          <img src="images/logo.png" alt="Logo Kopi Unyu" class="h-10 w-10 object-cover rounded" />
           <div>
             <h1 class="text-lg font-bold">Kopi Unyu</h1>
             <p class="text-xs text-gray-500">Mantap Rasanya</p>
@@ -106,13 +105,13 @@
         <h3 class="text-2xl font-bold mb-6">Mengapa Memilih Kami?</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <article class="p-6 border rounded-lg text-center">
-            <img src="images/coffee-beans.jpg" alt="" class="mx-auto h-20 w-20 object-cover rounded-full mb-4" />
+            <img src="images/BijiKopiPremium.jpg" alt="" class="mx-auto h-20 w-20 object-cover rounded-full mb-4" />
             <h4 class="font-semibold">Biji Kopi Premium</h4>
             <p class="text-sm text-gray-600 mt-2">Kami memilih biji kopi Terbaek.</p>
           </article>
 
           <article class="p-6 border rounded-lg text-center">
-            <img src="images/comfortable.jpg" alt="" class="mx-auto h-20 w-20 object-cover rounded-full mb-4" />
+            <img src="images/SuasanaCafe.jpg" alt="" class="mx-auto h-20 w-20 object-cover rounded-full mb-4" />
             <h4 class="font-semibold">Suasana Nyaman</h4>
             <p class="text-sm text-gray-600 mt-2">Tempat nyaman segala kegiatan.</p>
           </article>
@@ -127,7 +126,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer bg-purple-800 text-white py-8 mt-12">
     <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
       <div>
@@ -161,12 +159,9 @@
     </div>
   </footer>
 
-  <!-- Small script -->
   <script>
-    // footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // mobile menu toggle
     const menuToggle = document.getElementById('menuToggle');
     menuToggle?.addEventListener('click', () => {
       const nav = document.querySelector('.main-nav ul');

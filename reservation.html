@@ -14,7 +14,7 @@
   <header class="fixed top-0 left-0 right-0 bg-white/90 z-40">
     <div class="container mx-auto px-4 py-3 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-2">
-        <img src="images/logo-placeholder.png" alt="" class="h-10 w-10 rounded" />
+        <img src="images/logo.png" alt="" class="h-10 w-10 rounded" />
         <span class="font-bold">Kopi Santai</span>
       </a>
       <nav class="hidden md:block">
@@ -32,7 +32,6 @@
     <h2 class="text-3xl font-bold mb-4">Reservasi Meja</h2>
 
     <section class="space-y-8">
-      <!-- Info -->
       <div>
         <h3 class="text-xl font-semibold mb-2">Informasi Reservasi</h3>
         <p class="mb-4">Untuk kenyamanan bersama, kami merekomendasikan reservasi untuk grup 5 orang ke atas atau untuk private room. Sistem ini memastikan meja Anda siap saat kedatangan.</p>
@@ -48,7 +47,6 @@
         </aside>
       </div>
 
-      <!-- Form -->
       <div>
         <form id="reservationForm" class="bg-white p-6 rounded shadow" novalidate>
           <fieldset>
@@ -119,14 +117,12 @@
   <script>
     document.getElementById('year4').textContent = new Date().getFullYear();
 
-    // Basic client-side validation feedback
     const form = document.getElementById('reservationForm');
     form.addEventListener('submit', function(e) {
       if (!form.checkValidity()) {
         e.preventDefault();
         alert('Mohon lengkapi form reservasi dengan benar.');
       } else {
-        // In real app: send to server (AJAX/fetch). Here: show confirmation and reset.
         e.preventDefault();
         alert('Terima kasih — permintaan reservasi Anda telah dikirim. Kami akan mengkonfirmasi via telepon/WA.');
         form.reset();
