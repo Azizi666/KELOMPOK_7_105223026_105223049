@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Kopi Santai</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="bg-amber-50 font-sans text-gray-800">
+
+  <header class="fixed top-0 left-0 right-0 bg-white/90 z-40">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="images/logo-placeholder.png" alt="" class="h-10 w-10 rounded" />
+        <span class="font-bold">Kopi Santai</span>
+      </a>
+      <nav class="hidden md:block">
+        <ul class="flex gap-6 items-center">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html" class="font-semibold">About</a></li>
+          <li><a href="reservation.html" class="btn-primary">Reservasi</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mt-20 container mx-auto px-4 py-8">
+    <!-- Story Section -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+      <figure>
+        <img src="images/cafe-interior.jpg" alt="Interior Kopi Santai" class="w-full h-80 object-cover rounded" />
+        <figcaption class="text-sm text-gray-600 mt-2">Interior hangat Kopi Santai.</figcaption>
+      </figure>
+
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Cerita Kami</h2>
+        <p class="mb-4">Kopi Santai didirikan oleh sekelompok pecinta kopi dengan tujuan membawa pengalaman ngopi berkualitas ke lingkungan sekitar. Dimulai dari sebuah gerai kecil pada tahun 2018, kami berfokus pada kualitas biji dan pelayanan ramah.</p>
+        <p class="mb-4">Kami selalu memilih biji kopi dari petani lokal yang menerapkan praktik ramah lingkungan. Proses pemanggangan kami dikembangkan untuk menonjolkan karakter rasa tiap daerah asal biji.</p>
+        <p class="mb-4">Visi kami adalah menjadi ruang komunitas di mana orang dapat bekerja, berbincang, atau sekadar istirahat sejenak dari aktivitas harian — sambil menikmati kopi yang konsisten kualitasnya.</p>
+        <blockquote class="border-l-4 pl-4 italic text-gray-700">"Kopi yang baik adalah awal percakapan yang hebat."</blockquote>
+      </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="mt-10">
+      <h3 class="text-2xl font-bold mb-4">Nilai-Nilai Kami</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Kualitas Premium</li>
+        <li>Pelayanan Terbaik</li>
+        <li>Sustainability</li>
+        <li>Community</li>
+        <li>Inovasi Rasa</li>
+      </ul>
+    </section>
+
+    <!-- Gallery -->
+    <section class="mt-10">
+      <h3 class="text-2xl font-bold mb-4">Galeri Kafe</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <figure><img src="images/gallery1.jpg" alt="" class="rounded h-40 w-full object-cover"/><figcaption class="text-xs text-gray-600 mt-1">Suasana sore</figcaption></figure>
+        <figure><img src="images/gallery2.jpg" alt="" class="rounded h-40 w-full object-cover"/><figcaption class="text-xs text-gray-600 mt-1">Barista sedang membuat kopi</figcaption></figure>
+        <figure><img src="images/gallery3.jpg" alt="" class="rounded h-40 w-full object-cover"/><figcaption class="text-xs text-gray-600 mt-1">Eksterior kafe</figcaption></figure>
+        <figure><img src="images/gallery4.jpg" alt="" class="rounded h-40 w-full object-cover"/><figcaption class="text-xs text-gray-600 mt-1">Corner santai</figcaption></figure>
+        <figure><img src="images/gallery5.jpg" alt="" class="rounded h-40 w-full object-cover"/><figcaption class="text-xs text-gray-600 mt-1">Menu andalan</figcaption></figure>
+        <figure><img src="images/gallery6.jpg" alt="" class="rounded h-40 w-full object-cover"/><figcaption class="text-xs text-gray-600 mt-1">Komunitas acara</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- Location & Hours -->
+    <section class="mt-10 grid md:grid-cols-2 gap-6 items-start">
+      <div>
+        <h3 class="text-2xl font-bold mb-4">Lokasi & Jam Buka</h3>
+        <p class="mb-4">Kunjungi kami di lokasi berikut atau hubungi untuk reservasi dan event.</p>
+
+        <!-- embedded google maps (placeholder src, ganti dengan iframe embed yang valid) -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!..."
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-2">Jam Operasional</h4>
+        <table class="w-full text-sm">
+          <tr><td>Senin - Jumat</td><td class="text-right">08:00 - 21:00</td></tr>
+          <tr><td>Sabtu</td><td class="text-right">08:00 - 22:00</td></tr>
+          <tr><td>Minggu</td><td class="text-right">09:00 - 20:00</td></tr>
+        </table>
+
+        <address class="not-italic mt-4 text-sm">
+          Jl. Contoh No. 123, Kecamatan Santai, Kota Kopi<br/>
+          Telepon: <a href="tel:+628123456789" class="underline">+62 812-3456-789</a>
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-amber-800 text-white py-6 mt-8">
+    <div class="container mx-auto px-4 text-sm">&copy; <span id="year3"></span> Kopi Santai</div>
+  </footer>
+
+  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+</body>
+</html>

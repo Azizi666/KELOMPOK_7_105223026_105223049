@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reservasi — Kopi Santai</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="bg-amber-50 font-sans text-gray-800">
+
+  <header class="fixed top-0 left-0 right-0 bg-white/90 z-40">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="images/logo-placeholder.png" alt="" class="h-10 w-10 rounded" />
+        <span class="font-bold">Kopi Santai</span>
+      </a>
+      <nav class="hidden md:block">
+        <ul class="flex gap-6 items-center">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="reservation.html" class="font-semibold">Reservasi</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mt-20 container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold mb-4">Reservasi Meja</h2>
+
+    <section class="grid md:grid-cols-2 gap-8">
+      <!-- Info -->
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Informasi Reservasi</h3>
+        <p class="mb-4">Untuk kenyamanan bersama, kami merekomendasikan reservasi untuk grup 5 orang ke atas atau untuk private room. Sistem ini memastikan meja Anda siap saat kedatangan.</p>
+        <ul class="list-disc pl-6 text-sm mb-4">
+          <li>Reservasi dibuka maksimal 2 minggu sebelumnya.</li>
+          <li>Mohon datang 10 menit sebelum waktu reservasi.</li>
+          <li>Konfirmasi melalui telepon/WhatsApp mungkin dilakukan.</li>
+        </ul>
+
+        <aside class="p-4 bg-white border rounded">
+          <h4 class="font-semibold">Alternatif Kontak</h4>
+          <p class="text-sm mt-2">Telepon / WA: <a href="tel:+628123456789" class="underline">+62 812-3456-789</a></p>
+        </aside>
+      </div>
+
+      <!-- Form -->
+      <div>
+        <form id="reservationForm" class="bg-white p-6 rounded shadow" novalidate>
+          <fieldset>
+            <legend class="font-semibold mb-3">Data Pribadi</legend>
+
+            <label for="name" class="block text-sm">Nama Lengkap <span class="text-rose-600">*</span></label>
+            <input id="name" name="name" type="text" required placeholder="Nama lengkap Anda" class="input" />
+
+            <label for="email" class="block text-sm mt-3">Email <span class="text-rose-600">*</span></label>
+            <input id="email" name="email" type="email" required placeholder="email@contoh.com" class="input" />
+
+            <label for="phone" class="block text-sm mt-3">No. Telepon <span class="text-rose-600">*</span></label>
+            <input id="phone" name="phone" type="tel" pattern="^[0-9+\s()-]{7,}$" required placeholder="+62 8111111111" class="input" />
+          </fieldset>
+
+          <fieldset class="mt-4">
+            <legend class="font-semibold mb-3">Detail Reservasi</legend>
+
+            <label for="date" class="block text-sm">Tanggal <span class="text-rose-600">*</span></label>
+            <input id="date" name="date" type="date" required class="input" />
+
+            <label for="time" class="block text-sm mt-3">Waktu <span class="text-rose-600">*</span></label>
+            <input id="time" name="time" type="time" required class="input" />
+
+            <label for="people" class="block text-sm mt-3">Jumlah Orang</label>
+            <select id="people" name="people" class="input">
+              <option value="1">1 orang</option>
+              <option value="2">2 orang</option>
+              <option value="3">3 orang</option>
+              <option value="4">4 orang</option>
+              <option value="5">5 orang</option>
+              <option value="6">6 orang</option>
+              <option value="7">7 orang</option>
+              <option value="8">8 orang</option>
+              <option value="9">9 orang</option>
+              <option value="10">10 orang</option>
+            </select>
+
+            <label for="tableType" class="block text-sm mt-3">Tipe Meja</label>
+            <select id="tableType" name="tableType" class="input">
+              <option>Regular</option>
+              <option>Window Seat</option>
+              <option>Private Room</option>
+            </select>
+
+            <label for="notes" class="block text-sm mt-3">Catatan Khusus</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Contoh: ulang tahun, permintaan khusus..." class="input"></textarea>
+          </fieldset>
+
+          <fieldset class="mt-4">
+            <legend class="sr-only">Persetujuan</legend>
+            <label class="flex items-start gap-2">
+              <input type="checkbox" id="agree" required />
+              <span class="text-sm">Saya setuju dengan syarat & ketentuan reservasi Kopi Santai. *</span>
+            </label>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary mt-4 w-full">Kirim Reservasi</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-amber-800 text-white py-6 mt-8">
+    <div class="container mx-auto px-4 text-sm">&copy; <span id="year4"></span> Kopi Santai</div>
+  </footer>
+
+  <script>
+    document.getElementById('year4').textContent = new Date().getFullYear();
+
+    // Basic client-side validation feedback
+    const form = document.getElementById('reservationForm');
+    form.addEventListener('submit', function(e) {
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        alert('Mohon lengkapi form reservasi dengan benar.');
+      } else {
+        // In real app: send to server (AJAX/fetch). Here: show confirmation and reset.
+        e.preventDefault();
+        alert('Terima kasih — permintaan reservasi Anda telah dikirim. Kami akan mengkonfirmasi via telepon/WA.');
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>

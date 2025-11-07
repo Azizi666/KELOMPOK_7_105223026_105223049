@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Menu — Kopi Santai</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="bg-amber-50 font-sans text-gray-800">
+
+  <!-- Header (reuse) -->
+  <header class="fixed top-0 left-0 right-0 bg-white/90 z-40 shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="images/logo-placeholder.png" alt="" class="h-10 w-10 rounded" />
+        <span class="font-bold">Kopi Santai</span>
+      </a>
+      <nav>
+        <ul class="hidden md:flex gap-6 items-center">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html" class="font-semibold">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="reservation.html" class="btn-primary">Reservasi</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mt-20">
+    <section class="container mx-auto px-4 py-8">
+      <h2 class="text-3xl font-bold mb-4">Daftar Menu Lengkap</h2>
+
+      <!-- Categories Filter -->
+      <nav class="mb-6">
+        <div class="flex flex-wrap gap-3">
+          <button class="filter-btn btn-chip active" data-filter="all">All</button>
+          <button class="filter-btn btn-chip" data-filter="coffee">Coffee</button>
+          <button class="filter-btn btn-chip" data-filter="non-coffee">Non-Coffee</button>
+          <button class="filter-btn btn-chip" data-filter="food">Food</button>
+          <button class="filter-btn btn-chip" data-filter="snacks">Snacks</button>
+        </div>
+      </nav>
+
+      <!-- Menu grid -->
+      <section id="menuGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- 12+ items, each article with data-category -->
+        <!-- Coffee items -->
+        <article class="menu-item" data-category="coffee">
+          <figure><img src="images/espresso.jpg" alt="Espresso" class="w-full h-44 object-cover rounded" />
+            <figcaption class="sr-only">Espresso</figcaption>
+          </figure>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Espresso</h3>
+            <p class="text-sm text-gray-600">Shot kopi pekat, base untuk banyak minuman.</p>
+            <div class="mt-3 flex items-center justify-between">
+              <span class="price">Rp18.000</span>
+              <span class="badge">Best Seller</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="coffee">
+          <figure><img src="images/americano.jpg" alt="Americano" class="w-full h-44 object-cover rounded" /></figure>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Americano</h3>
+            <p class="text-sm text-gray-600">Espresso yang diseduh dengan air panas.</p>
+            <div class="mt-3 flex items-center justify-between">
+              <span class="price">Rp20.000</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="coffee">
+          <figure><img src="images/latte.jpg" alt="Latte" class="w-full h-44 object-cover rounded" /></figure>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Latte</h3>
+            <p class="text-sm text-gray-600">Espresso dengan susu panas dan busa tipis.</p>
+            <div class="mt-3 flex items-center justify-between">
+              <span class="price">Rp28.000</span>
+              <span class="badge new">New</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="coffee">
+          <figure><img src="images/cappuccino.jpg" alt="Cappuccino" class="w-full h-44 object-cover rounded" /></figure>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Cappuccino</h3>
+            <p class="text-sm text-gray-600">Rasio espresso, susu, dan foam yang seimbang.</p>
+            <div class="mt-3 flex items-center justify-between">
+              <span class="price">Rp30.000</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Non-Coffee -->
+        <article class="menu-item" data-category="non-coffee">
+          <figure><img src="images/matcha.jpg" alt="Matcha" class="w-full h-44 object-cover rounded" /></figure>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Matcha Latte</h3>
+            <p class="text-sm text-gray-600">Teh hijau bubuk kelas premium dengan susu.</p>
+            <div class="mt-3 flex items-center justify-between">
+              <span class="price">Rp25.000</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="non-coffee">
+          <figure><img src="images/chocolate.jpg" alt="Chocolate" class="w-full h-44 object-cover rounded" /></figure>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Hot Chocolate</h3>
+            <p class="text-sm text-gray-600">Coklat kental, pilihan hangat dan manis.</p>
+            <div class="mt-3 flex items-center justify-between">
+              <span class="price">Rp22.000</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="non-coffee">
+          <figure><img src="images/tea.jpg" alt="Tea" class="w-full h-44 object-cover rounded" /></figure>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Tea (Various)</h3>
+            <p class="text-sm text-gray-600">Pilihan teh hitam, herbal, dan buah.</p>
+            <div class="mt-3 flex items-center justify-between">
+              <span class="price">Rp15.000</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Food -->
+        <article class="menu-item" data-category="food">
+          <figure><img src="images/sandwich.jpg" alt="Sandwich" class="w-full h-44 object-cover rounded" /></figure>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Sandwich</h3>
+            <p class="text-sm text-gray-600">Roti isi dengan sayur dan daging pilihan.</p>
+            <div class="mt-3 flex items-center justify-between">
+              <span class="price">Rp40.000</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="food">
+          <figure><img src="images/pasta.jpg" alt="Pasta" class="w-full h-44 object-cover rounded" /></figure>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Pasta</h3>
+            <p class="text-sm text-gray-600">Pasta creamy dengan bumbu rumahan.</p>
+            <div class="mt-3 flex items-center justify-between">
+              <span class="price">Rp55.000</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="food">
+          <figure><img src="images/salad.jpg" alt="Salad" class="w-full h-44 object-cover rounded" /></figure>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Salad</h3>
+            <p class="text-sm text-gray-600">Segar dengan dressing pilihan.</p>
+            <div class="mt-3 flex items-center justify-between">
+              <span class="price">Rp35.000</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Snacks -->
+        <article class="menu-item" data-category="snacks">
+          <figure><img src="images/cake.jpg" alt="Cake" class="w-full h-44 object-cover rounded" /></figure>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Cake</h3>
+            <p class="text-sm text-gray-600">Pilihan cake homemade.</p>
+            <div class="mt-3 flex items-center justify-between">
+              <span class="price">Rp35.000</span>
+              <span class="badge">Best Seller</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="snacks">
+          <figure><img src="images/cookie.jpg" alt="Cookies" class="w-full h-44 object-cover rounded" /></figure>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Cookies</h3>
+            <p class="text-sm text-gray-600">Cemilan renyah untuk teman minum.</p>
+            <div class="mt-3 flex items-center justify-between">
+              <span class="price">Rp12.000</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Extra items to reach 12+ -->
+        <article class="menu-item" data-category="coffee">
+          <figure><img src="images/mocha.jpg" alt="Mocha" class="w-full h-44 object-cover rounded" /></figure>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Mocha</h3>
+            <p class="text-sm text-gray-600">Perpaduan kopi dan coklat.</p>
+            <div class="mt-3 flex items-center justify-between"><span class="price">Rp32.000</span></div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="snacks">
+          <figure><img src="images/pastry.jpg" alt="Pastry" class="w-full h-44 object-cover rounded" /></figure>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Pastry</h3>
+            <p class="text-sm text-gray-600">Pastry manis atau asin, pilihan harian.</p>
+            <div class="mt-3 flex items-center justify-between"><span class="price">Rp20.000</span></div>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <footer class="bg-amber-800 text-white py-6 mt-8">
+    <div class="container mx-auto px-4 text-sm">
+      &copy; <span id="year2"></span> Kopi Santai
+    </div>
+  </footer>
+
+  <!-- Simple JS filter (uses data-filter, required by spec) -->
+  <script>
+    document.getElementById('year2').textContent = new Date().getFullYear();
+
+    const buttons = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('#menuGrid .menu-item');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        items.forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

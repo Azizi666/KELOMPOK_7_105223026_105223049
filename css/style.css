@@ -1,0 +1,109 @@
+/* style.css - main styling */
+
+/* 1. Reset & base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #1f2937;
+  background: #fffaf0;
+  line-height: 1.6;
+}
+
+/* Container helper used in html files */
+.container { max-width: 1100px; margin-left: auto; margin-right: auto; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn-primary {
+  background: #7a3e0a; color: #fff;
+}
+.btn-secondary {
+  background: transparent; color: #7a3e0a; border: 2px solid #7a3e0a;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+
+/* nav link */
+.nav-link { color: #374151; text-decoration: none; font-weight: 600; }
+
+/* Hero */
+.hero {
+  background-image: linear-gradient(rgba(13,14,15,0.12), rgba(13,14,15,0.12)), url('../images/hero-coffee.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #111827;
+}
+.hero-title { color: #111827; }
+
+/* Cards / Menu */
+.menu-card, .menu-item {
+  background: white;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.menu-card:hover, .menu-item:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(15,23,42,0.12); }
+
+.price { font-weight: 700; color: #7a3e0a; }
+.badge {
+  background: #fde68a;
+  color: #7a3e0a;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.badge.new { background: #c7f9cc; color: #166534; }
+
+/* Why choose us */
+article p { font-size: 0.95rem; color: #374151; }
+
+/* Footer */
+.site-footer { padding-top: 2rem; padding-bottom: 2rem; }
+
+/* Form elements */
+.input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e6e1dc;
+  margin-top: 0.25rem;
+}
+.input:focus { outline: 3px solid rgba(122,62,10,0.12); border-color: #7a3e0a; }
+
+/* Chips for filters */
+.btn-chip {
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #e9d5b5;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn-chip.active { background: #7a3e0a; color: white; }
+
+/* small responsive tweaks in responsive.css */
+
+/* Animations (hero fade-in) */
+.hero-title, .hero p, .hero .btn {
+  opacity: 0; transform: translateY(8px);
+  animation: heroFadeIn 0.8s ease forwards;
+}
+.hero-title { animation-delay: 0.12s; }
+.hero p { animation-delay: 0.22s; }
+.hero .btn { animation-delay: 0.34s; }
+
+@keyframes heroFadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Accessibility helpers */
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }

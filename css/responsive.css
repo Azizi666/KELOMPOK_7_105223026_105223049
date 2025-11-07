@@ -1,0 +1,36 @@
+/* responsive.css - mobile-first approach */
+
+/* Base mobile styles already in style.css */
+
+/* Mobile: default single-column; small adjustments */
+header .main-nav ul { display: none; } /* hide desktop nav on mobile, toggled by JS */
+header .main-nav ul.hidden { display: none; }
+
+/* Medium screens (tablet) */
+@media (min-width: 768px) {
+  header .main-nav ul { display: flex !important; }
+  .hero { min-height: 64vh; background-position: center; }
+  .menu-card img, .menu-item figure img { height: 220px; }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container { max-width: 1200px; }
+  .hero { min-height: 72vh; }
+  header { padding: 1rem 0; }
+  .main-nav ul { gap: 2rem; }
+}
+
+/* Grid adjustments for gallery */
+@media (min-width: 768px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Reduce font sizes on small devices */
+@media (max-width: 400px) {
+  .hero-title { font-size: 1.6rem !important; }
+  .btn { padding: 0.5rem 0.75rem; }
+}
